@@ -15,20 +15,24 @@
 # that they are not ran in isolation but in the order shown and the state of the device is not reset or 
 # altered in between executions (unless preconditions are used).
 tests = [ {'description': 'first',
-    'steps': [ {'inputs': [('PINA',0x00)], 'iterations': 5 } ],
-    'expected': [('PORTB',0x00)],
+    'steps': [ {'inputs': [('PINA',0x03)], 'iterations': 5 } ],
+    'expected': [('PORTC',2)],
     },
     {'description': 'second',
     'steps': [ {'inputs': [('PINA', 0x01)],'iterations': 5}],
-    'expected': [('PORTB',0x01)],
+    'expected': [('PORTC',1)],
     },
     {'description': 'third',
-    'steps': [ {'inputs': [('PINA', 0x02)],'iterations': 5}],
-    'expected': [('PORTB',0x00)],
+    'steps': [ {'inputs': [('PINA', 0x08)],'iterations': 5}],
+    'expected': [('PORTC',1)],
     },
     {'description': 'fourth',
-    'steps': [ {'inputs': [('PINA', 0x03)],'iterations': 5}],
-    'expected': [('PORTB',0x00)],
+    'steps': [ {'inputs': [('PINA', 0x0F)],'iterations': 5}],
+    'expected': [('PORTC',4)],
+    },
+    {'description': 'fifth',
+    'steps': [ {'inputs': [('PINA', 0x0D)],'iterations': 5}],
+    'expected': [('PORTC',3)],
     }
     ]
 
