@@ -12,23 +12,27 @@
 #include "simAVRHeader.h"
 #endif
 
-#define inputs (PINA & 0x03)
+#define inputs (PINA & 0x0F)
 unsigned char outtie = 0;
 
 int main(void) {
     /* Insert DDR and PORT initializations */
     DDRA = 0x00;    PORTA = 0xFF;
-    DDRB = 0xFF;    PORTB = 0x00;
+    DDRC = 0xFF;    PORTC = 0x00;
     
+    unsigned char cnt = 0;
+    unsigned char temp = inputs;
     
     /* Insert your solution below */
     while (1) {
-        if (inputs == 0x01)
-            outtie = 0x01;
-        else
-            outtie = 0x00;
+        for (unsigned char i = 0; i < 4; i++){
+            if ((temp & 0x01) == 1)
+               cnt++;
+            
+            temp >> 1;
+        }
         
-        PORTB = outtie;
+        PORTC = cnt;
     }
     return 1;
 }
