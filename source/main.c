@@ -29,7 +29,7 @@ int main(void) {
             if ((temp & 0x01) == 1)
                cnt++;
             
-            temp >> 1;
+            temp = temp >> 1;
         }
         
         PORTC = cnt;
