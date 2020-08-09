@@ -25,15 +25,6 @@ int main(void) {
     
     /* Insert your solution below */
     while (1) {
-         
-        if (i < 4){
-            cnt = cnt + (temp & 0x01);
-            temp = temp >> 1;
-        }
-        else {
-            PORTC = 2;
-            cnt = 0;    i = 0;
-        }
-    }
+        PORTC = 2;
     return 1;
 }
