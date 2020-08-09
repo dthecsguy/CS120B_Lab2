@@ -26,6 +26,7 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
         PORTC = 2;
-    return 1;
     }
+    
+    return 1;
 }
