@@ -27,4 +27,5 @@ int main(void) {
     while (1) {
         PORTC = 2;
     return 1;
+    }
 }
