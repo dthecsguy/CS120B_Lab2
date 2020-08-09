@@ -31,7 +31,7 @@ int main(void) {
             temp = temp >> 1;
         }
         else {
-            PORTC = cnt;
+            PORTC = 2;
             cnt = 0;    i = 0;
         }
     }
