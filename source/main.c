@@ -27,17 +27,13 @@ int main(void) {
     while (1) {
          
         while (i < 4){
-            if ((temp & 0x01) == 0x01)
-               cnt++;
-            
+            cnt = cnt + (temp & 0x01);
             temp = temp >> 1;
             i++;
         }
         
-        i = 0;
-        
         PORTC = cnt;
-        cnt = 0;
+        cnt = 0;    i = 0;
     }
     return 1;
 }
