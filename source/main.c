@@ -25,8 +25,14 @@ int main(void) {
     
     /* Insert your solution below */
     while (1) {
-        PORTC = cnt;
-        cnt++;
+        while(i<2){
+            PORTC = cnt;
+            cnt++;
+            i++;
+        }
+        
+        cnt = 0;
+        i = 0;
     }
     
     return 1;
