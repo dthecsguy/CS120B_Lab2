@@ -27,7 +27,7 @@ int main(void) {
     while (1) {
          
         while (i < 4){
-            if ((temp & 0x01) == 1)
+            if ((temp & 0x01) == 0x01)
                cnt++;
             
             temp = temp >> 1;
