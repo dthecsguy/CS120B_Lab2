@@ -25,7 +25,7 @@ int main(void) {
     
     /* Insert your solution below */
     while (1) {
-        PORTC = PINA
+        PORTC = PINA;
     }
     
     return 1;
