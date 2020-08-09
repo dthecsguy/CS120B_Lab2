@@ -26,14 +26,14 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
          
-        while (i < 4){
+        if (i < 4){
             cnt = cnt + (temp & 0x01);
             temp = temp >> 1;
-            i++;
         }
-        
-        PORTC = cnt;
-        cnt = 0;    i = 0;
+        else {
+            PORTC = cnt;
+            cnt = 0;    i = 0;
+        }
     }
     return 1;
 }
