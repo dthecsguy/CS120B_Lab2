@@ -12,30 +12,39 @@
 #include "simAVRHeader.h"
 #endif
 
-#define inputs PINA
+#include <stdlib.h>
+
+#define A PINA
+#define B PINB
+#define C PINC
+#define MAX_KG 140
+#define MAX_KG_DIFF 80
 
 int main(void) {
     /* Insert DDR and PORT initializations */
     DDRA = 0x00;    PORTA = 0xFF;
-    DDRC = 0xFF;    PORTC = 0x00;
+    DDRB = 0x00;    PORTB = 0xFF;
+    DDRC = 0x00;    PORTC = 0xFF;
+    DDRD = 0xFF;    PORTD = 0x00;
     
     /* Insert your solution below */
     while (1) {
-        unsigned char cnt = 0, i = 0;
-        unsigned char temp = inputs;
         unsigned char outtie = 0;
+        unsigned short sum = 0;
+        short diff = 0;
         
-        while (i < 4){
-            if (temp & 0x01){
-                cnt++;
-            }
-            
-            i++;
-            temp = temp >> 1;
+        sum = A + B + C;
+        diff =abs(C - A);
+        
+        if (sum >= MAX_KG){
+            outtie = (outtie | 0x01);
         }
         
-        outtie = (cnt == 4) ? (cnt & 0x0F) | 0x80 : (cnt & 0x0F) | 0x00;
-        PORTC = outtie;
+        if (diff >= MAX_KG_DIFF)
+            outtie = (outtie | 0x02);
+            
+        outtie |= (sum & 0xFC);
+       
     }
     
     return 1;
