@@ -43,7 +43,7 @@ int main(void) {
         if (diff >= MAX_KG_DIFF)
             outtie = (outtie | 0x02);
             
-        outtie |= (sum & 0xFC);
+        outtie = outtie | (sum & 0xFC);
        
     }
     
