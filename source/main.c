@@ -30,8 +30,8 @@ int main(void) {
     /* Insert your solution below */
     while (1) {
         unsigned char outtie = 0;
-        unsigned short sum = 0;
-        short diff = 0;
+        unsigned char sum = 0;
+        unsigned char diff = 0;
         
         sum = A + B + C;
         diff =abs(C - A);
