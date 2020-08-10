@@ -16,23 +16,23 @@
 # altered in between executions (unless preconditions are used).
 tests = [ {'description': 'first',
     'steps': [ {'inputs': [('PINA',0x03)], 'iterations': 1 } ],
-    'expected': [('PORTC',2)],
+    'expected': [('PORTC',0x02)],
     },
     {'description': 'second',
     'steps': [ {'inputs': [('PINA', 0x01)],'iterations': 1}],
-    'expected': [('PORTC',1)],
+    'expected': [('PORTC',0x01)],
     },
     {'description': 'third',
     'steps': [ {'inputs': [('PINA', 0x08)],'iterations': 1}],
-    'expected': [('PORTC',1)],
+    'expected': [('PORTC',0x01)],
     },
     {'description': 'fourth',
     'steps': [ {'inputs': [('PINA', 0x0F)],'iterations': 1}],
-    'expected': [('PORTC',4)],
+    'expected': [('PORTC',0x84)],
     },
     {'description': 'fifth',
     'steps': [ {'inputs': [('PINA', 0x0D)],'iterations': 1}],
-    'expected': [('PORTC',3)],
+    'expected': [('PORTC',0x03)],
     }
     ]
 
