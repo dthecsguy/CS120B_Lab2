@@ -34,7 +34,7 @@ int main(void) {
             temp = temp >> 1;
         }
         
-        PORTC = cnt;
+        outtie = (cnt == 4) ? (cnt & 0x0F) | 0x80 : (cnt & 0x0F) | 0x00;
     }
     
     return 1;
