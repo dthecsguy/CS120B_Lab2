@@ -35,6 +35,8 @@ int main(void) {
         }
         
         PORTC = cnt;
+        cnt = 0;
+        i = 0;
     }
     
     return 1;
