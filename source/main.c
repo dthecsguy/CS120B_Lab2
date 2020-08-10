@@ -13,7 +13,6 @@
 #endif
 
 #define inputs PINA
-unsigned char outtie = 0;
 
 int main(void) {
     /* Insert DDR and PORT initializations */
@@ -24,6 +23,7 @@ int main(void) {
     while (1) {
         unsigned char cnt = 0, i = 0;
         unsigned char temp = inputs;
+        unsigned char outtie = 0;
         
         while (i < 4){
             if (temp & 0x01){
@@ -35,6 +35,7 @@ int main(void) {
         }
         
         outtie = (cnt == 4) ? (cnt & 0x0F) | 0x80 : (cnt & 0x0F) | 0x00;
+        PORTC = outtie;
     }
     
     return 1;
