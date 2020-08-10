@@ -12,7 +12,7 @@
 #include "simAVRHeader.h"
 #endif
 
-#define inputs (PINA & 0x0F)
+#define inputs PINA
 unsigned char outtie = 0;
 
 int main(void) {
@@ -25,7 +25,16 @@ int main(void) {
     
     /* Insert your solution below */
     while (1) {
-        PORTC = PINA;
+        while (i < 4){
+            if (PINA & 0x01){
+                cnt++;
+            }
+            
+            i++;
+            temp = temp >> 1;
+        }
+        
+        PORTC = cnt;
     }
     
     return 1;
