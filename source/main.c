@@ -20,13 +20,13 @@ int main(void) {
     DDRA = 0x00;    PORTA = 0xFF;
     DDRC = 0xFF;    PORTC = 0x00;
     
-    unsigned char cnt = 0, i = 0;
-    unsigned char temp = inputs;
-    
     /* Insert your solution below */
     while (1) {
+        unsigned char cnt = 0, i = 0;
+        unsigned char temp = inputs;
+        
         while (i < 4){
-            if (PINA & 0x01){
+            if (temp & 0x01){
                 cnt++;
             }
             
@@ -35,8 +35,6 @@ int main(void) {
         }
         
         PORTC = cnt;
-        cnt = 0;
-        i = 0;
     }
     
     return 1;
