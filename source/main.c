@@ -33,10 +33,6 @@ int main(void) {
     
     /* Insert your solution below */
     while (1) {
-        outtie = 0;
-        sum = 0;
-        diff = 0;
-        
         sum = A + B + C;
         diff = abs(C - A);
         
