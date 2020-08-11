@@ -29,7 +29,7 @@ int main(void){
         
     /* Insert your solution below */
     while(1){
-        /*unsigned char outtie = 0;
+        unsigned char outtie = 0;
         unsigned char sum = 0;
         unsigned char diff = 0;
         
@@ -45,7 +45,7 @@ int main(void){
             
         outtie = outtie | (sum & 0xFC);
         
-        PORTD = outtie;*/
+        PORTD = outtie;
     }
     
     return 1;
