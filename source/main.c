@@ -14,9 +14,9 @@
 
 #include <stdlib.h>
 
-#define A PINA
-#define B PINB
-#define C PINC
+#define A (PINA & 0xFF)
+#define B (PINB & 0xFF)
+#define C (PINC & 0xFF)
 #define MAX_KG 140
 #define MAX_KG_DIFF 80
 
@@ -27,11 +27,15 @@ int main(void) {
     DDRC = 0x00;    PORTC = 0xFF;
     DDRD = 0xFF;    PORTD = 0x00;
     
+    unsigned char outtie = 0;
+    unsigned char sum = 0;
+    unsigned char diff = 0;
+    
     /* Insert your solution below */
     while (1) {
-        unsigned char outtie = 0;
-        unsigned char sum = 0;
-        unsigned char diff = 0;
+        outtie = 0;
+        sum = 0;
+        diff = 0;
         
         sum = A + B + C;
         diff =abs(C - A);
