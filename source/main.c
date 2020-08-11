@@ -3,6 +3,12 @@
  *	Lab Section:
  *	Assignment: Lab #  Exercise #
  *	Exercise Description: [optional - include for your own benefit]
+ 
+    I dont understand how to represent the sum because the highest sum can be 765 which would
+    need 10 bit. Only taking the highest six would not yield a number within 3. 
+    
+    I noticed with numbers that arent extreme we can represent the sum as highest 6 bits give or take 3.
+ 
  *
  *	I acknowledge all content contained herein, excluding template or example
  *	code, is my own original work.
