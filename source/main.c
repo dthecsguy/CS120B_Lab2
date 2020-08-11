@@ -38,7 +38,7 @@ int main(void) {
         diff = 0;
         
         sum = A + B + C;
-        diff =abs(C - A);
+        diff = abs(C - A);
         
         if (sum >= MAX_KG){
             outtie = (outtie | 0x01);
