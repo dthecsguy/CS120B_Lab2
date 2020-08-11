@@ -20,19 +20,19 @@
 #define MAX_KG 140
 #define MAX_KG_DIFF 80
 
-int main(void) {
+int main(void){
     /* Insert DDR and PORT initializations */
     DDRA = 0x00;    PORTA = 0xFF;
     DDRB = 0x00;    PORTB = 0xFF;
     DDRC = 0x00;    PORTC = 0xFF;
     DDRD = 0xFF;    PORTD = 0x00;
-    
-    unsigned char outtie = 0;
-    unsigned char sum = 0;
-    unsigned char diff = 0;
-    
+        
     /* Insert your solution below */
-    while (1) {
+    while(1){
+        /*unsigned char outtie = 0;
+        unsigned char sum = 0;
+        unsigned char diff = 0;
+        
         sum = A + B + C;
         diff = abs(C - A);
         
@@ -45,7 +45,7 @@ int main(void) {
             
         outtie = outtie | (sum & 0xFC);
         
-        PORTD = outtie;
+        PORTD = outtie;*/
     }
     
     return 1;
