@@ -24,8 +24,8 @@ tests = [
     },
     {'description': 'second', 'steps': [ 
     {'inputs': [('PINA', 0x1E), 
-                ('PINB', 0x3B), 
-                ('PINC', 0x3B)], 
+                ('PINB', 0x32), 
+                ('PINC', 0x32)], 
      'iterations': 1} ],
     'expected': [('PORTD',0x80)],
     }
