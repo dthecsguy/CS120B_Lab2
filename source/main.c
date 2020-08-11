@@ -48,7 +48,8 @@ int main(void) {
             outtie = (outtie | 0x02);
             
         outtie = outtie | (sum & 0xFC);
-       
+        
+        PORTD = outtie;
     }
     
     return 1;
